@@ -1,0 +1,57 @@
+Tests 4 verbs
+POST and PUT: Add course
+curl --data "name=CS 161" --data "days=MWF" --data "time=12:30-1:30" -H "Accept: application/json" http://apicourses-1208.appspot.com/course
+PASS
+
+GET: View course keys
+curl -H "Accept: application/json" http://apicourses-1208.appspot.com/course
+PASS
+
+GET: View specific course
+curl -H "Accept: application/json" http://apicourses-1208.appspot.com/course/5629499534213120
+PASS
+
+POST: Update course
+curl --data "key=5629499534213120" --data "name=CS 162" -H "Accept: application/json" http://apicourses-1208.appspot.com/updateCourse
+PASS
+
+POST and DELETE: Delete Course
+curl --data "key=5639445604728832" -H "Accept: application/json" http://apicourses-1208.appspot.com/deleteCourse
+PASS
+
+POST and PUT: Add student
+curl --data "name=Jason Flaig" --data "major=CS" --data "courses[]=5629499534213120" -H "Accept: application/json" http://apicourses-1208.appspot.com/student
+PASS
+
+GET: View course keys
+curl -H "Accept: application/json" http://apicourses-1208.appspot.com/student
+PASS
+
+GET: View specific course
+curl -H "Accept: application/json" http://apicourses-1208.appspot.com/student/5649391675244544
+PASS
+
+POST: Update course
+curl --data "key=5649391675244544" --data "name=Rob Smith" -H "Accept: application/json" http://apicourses-1208.appspot.com/updateStudent
+PASS
+
+POST and DELETE: Delete Course
+curl --data "key=5722646637445120" -H "Accept: application/json" http://apicourses-1208.appspot.com/deleteStudent
+PASS
+
+PUT: add course to student id
+curl -X PUT -H "Content-Length: 0" http://apicourses-1208.appspot.com/student/5649391675244544/course/5629499534213120
+PASS
+
+Error Checking - same as above without certain fields
+curl --data "days=MWF" --data "time=12:30-1:30" -H "Accept: application/json" http://apicourses-1208.appspot.com/course 
+FAILURE
+
+POST and DELETE: Delete Course
+curl --data -H "Accept: application/json" http://apicourses-1208.appspot.com/deleteStudent
+FAILURE
+
+curl -X PUT -H "Accept: application/json" http://apicourses-1208.appspot.com/student/5649391675244544/course/5629499534213120
+FAILURE
+
+... I could write all the test cases though if I ever left off a field those tests failed and this was the whole reason for doing this; I thought I wrote proper response codes

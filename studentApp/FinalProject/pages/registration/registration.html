@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>registration</title>
+
+    <link href="registration.css" rel="stylesheet" />
+    <script src="registration.js"></script>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+    <div class="registration fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Registration</span>
+            </h1>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <!--Create registration form-->
+            <form method="post" id="register-form">
+                <input type="text" name="userName" placeholder="Name" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <input type="password" name="passwordConfirm" placeholder="Confirm Password" required />
+                <!--<button id="registerBtn"></button>-->
+                
+            </form>
+            <h3 id="greeting"></h3>
+            <div id="divErrors"></div>
+        </section>
+    </div>
+</body>
+</html>

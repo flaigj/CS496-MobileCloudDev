@@ -1,0 +1,15 @@
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bin\Debug\ReverseMap\resources.pri
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bin\Debug\AppxManifest.xml
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bin\Debug\FinalProject.build.appxrecipe
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\priconfig.xml
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\priconfig.xml.intermediate
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\layout.resfiles
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\layout.resfiles.intermediate
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\resources.resfiles
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\resources.resfiles.intermediate
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\pri.resfiles
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\pri.resfiles.intermediate
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\qualifiers.txt
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\qualifiers.txt.intermediate
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\ProjectArchitectures.txt

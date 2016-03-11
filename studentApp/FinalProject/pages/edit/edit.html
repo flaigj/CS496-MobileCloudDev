@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>edit</title>
+
+    <link href="edit.css" rel="stylesheet" />
+    <script src="edit.js"></script>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+    <div class="edit fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Edit account</span>
+            </h1>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <form method="post" id="student-form">
+                <input type="text" name="student_name" placeholder="Name" />
+                <input type="text" name="student_major" placeholder="Major" />
+                <input type="text" name="student_courses" placeholder="Course" />
+            </form>
+            <div id="divErrors"></div>
+        </section>
+    </div>
+</body>
+</html>
