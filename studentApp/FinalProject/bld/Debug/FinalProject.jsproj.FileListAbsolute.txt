@@ -13,3 +13,18 @@ c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\b
 c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\qualifiers.txt.intermediate
 c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 c:\users\jason\documents\visual studio 2015\Projects\FinalProject\FinalProject\bld\Debug\ProjectArchitectures.txt
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bin\Debug\ReverseMap\resources.pri
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bin\Debug\AppxManifest.xml
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bin\Debug\FinalProject.build.appxrecipe
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\priconfig.xml
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\priconfig.xml.intermediate
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\layout.resfiles
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\layout.resfiles.intermediate
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\resources.resfiles
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\resources.resfiles.intermediate
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\pri.resfiles
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\pri.resfiles.intermediate
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\qualifiers.txt
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\ProjectArchitectures.txt

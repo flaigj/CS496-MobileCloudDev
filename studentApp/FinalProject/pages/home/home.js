@@ -12,7 +12,15 @@
     
             var loginBtn = document.getElementById("loginBtn");
             loginBtn.addEventListener("click", this.LoginPage, false);
+
+            var editBtn = document.getElementById("editBtn");
+            editBtn.addEventListener("click", this.EditPage, false);
         },
+
+        EditPage: function (eventInfo) {
+            WinJS.Navigation.navigate("/pages/edit/edit.html");
+        },
+
         RegisterPage: function (eventInfo) {
             WinJS.Navigation.navigate("/pages/registration/registration.html");
         },

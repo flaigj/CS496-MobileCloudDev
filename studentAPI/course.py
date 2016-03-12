@@ -68,8 +68,9 @@ class Course(webapp2.RequestHandler):
 		# write all ids
 		else:
 			q = db_models.Course.query()
-			keys = q.fetch(keys_only=True)
-			results = { 'keys' : [x.id() for x in keys]}
+			# keys = q.fetch(keys_only=True)
+			# results = { 'keys' : [x.id() for x in keys]}
+			results = [{'key':x.key.id(), 'name':x.name, 'days':x.days, 'time':x.time} for x in q.fetch()]
 			self.response.write(json.dumps(results))
 
 class UpdateCourse(webapp2.RequestHandler):

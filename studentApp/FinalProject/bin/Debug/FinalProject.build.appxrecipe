@@ -9,91 +9,100 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>c3fa4a2b-56d6-47f6-92e6-232d770f5b46</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bld\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\css\ui-themed.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\css\ui-themed.css">
       <PackagePath>css\ui-themed.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\css\ui-themed.theme-dark.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\css\ui-themed.theme-dark.css">
       <PackagePath>css\ui-themed.theme-dark.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\css\ui-themed.theme-light.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\css\ui-themed.theme-light.css">
       <PackagePath>css\ui-themed.theme-light.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\home\home.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\edit\edit.css">
+      <PackagePath>pages\edit\edit.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\login\login.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\login\login.css">
       <PackagePath>pages\login\login.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\registration\registration.css">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.css">
       <PackagePath>pages\registration\registration.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\images\Square150x150Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\Square150x150Logo.scale-240.png">
       <PackagePath>images\Square150x150Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\images\Square44x44Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\Square44x44Logo.scale-240.png">
       <PackagePath>images\Square44x44Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\images\Wide310x150Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\Wide310x150Logo.scale-240.png">
       <PackagePath>images\Wide310x150Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\images\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\Square71x71Logo.scale-240.png">
       <PackagePath>images\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\images\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\SplashScreen.scale-240.png">
       <PackagePath>images\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\images\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\StoreLogo.scale-240.png">
       <PackagePath>images\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\js\default.js">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\js\default.js">
       <PackagePath>js\default.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\js\jquery.js">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\js\jquery.js">
       <PackagePath>js\jquery.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\js\navigator.js">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\home\home.js">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\edit\edit.js">
+      <PackagePath>pages\edit\edit.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\login\login.js">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\login\login.js">
       <PackagePath>pages\login\login.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\registration\registration.js">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.js">
       <PackagePath>pages\registration\registration.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\home\home.html">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\edit\edit.html">
+      <PackagePath>pages\edit\edit.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\default.html">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\default.html">
       <PackagePath>default.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\login\login.html">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\login\login.html">
       <PackagePath>pages\login\login.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\pages\registration\registration.html">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.html">
       <PackagePath>pages\registration\registration.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\Visual Studio 2015\Projects\FinalProject\FinalProject\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
