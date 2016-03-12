@@ -6,6 +6,9 @@
     WinJS.UI.Pages.define("/pages/edit/edit.html", {
         ready: function (element, options) {
 
+            // display edit for session account
+            document.getElementById('editTitle').innerHTML = "Edit account: " + sessionStorage.getItem('username');
+
             // get array of course objects from datastore
             var uriStringDD = "http://localhost:8080/course";
             $.ajax({
@@ -28,26 +31,36 @@
                 }
             })
 
-            function toAdd() {
+            // edit/add info to student profile
+            function toEdit() {
                 var errors = "";
                 var formData = {};
                 $("#student-form").serializeArray().map(function (x) { formData[x.name] = x.value; });
                 var studentName = formData.student_name;
                 var studentMajor = formData.student_major;
                 var courseAdd = formData.course_add;
+                var studentCourses = formData.student_courses;
+                //console.log(courseAdd);
+                var mySession = sessionStorage.getItem('username');
 
-                console.log(studentName);
-                console.log(studentMajor);
-                console.log(courseAdd);
+                var uriString = "http://localhost:8080/student";
+                $.ajax({
+                    url: uriString,
+                    type: "post",
+                    contentType: "application/x-www-form-urlencoded",
+                    data: { username: mySession, name: studentName, major: studentMajor, 'courses[]': courseAdd },
+                    success: function (result) {
+                    }
+                });
             }
 
-            var context = document.getElementById("student-form");
+            var form = document.getElementById("student-form");
             var btn = document.createElement("input");
             btn.id = "add-btn";
             btn.type = "button";
             btn.value = "Save";
-            btn.onclick = toAdd;
-            context.appendChild(btn);
+            btn.onclick = toEdit;
+            form.appendChild(btn);
         },
     });
 })();

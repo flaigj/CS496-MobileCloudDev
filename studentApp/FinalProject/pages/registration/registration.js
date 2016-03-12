@@ -60,7 +60,7 @@
                             sessionStorage.setItem('username', user.username);
                             // clear user errors
                             document.getElementById('divErrors').innerHTML = "";
-                            //WinJS.Navigation.navigate("/pages/edit/edit.html");
+                            WinJS.Navigation.navigate("/pages/edit/edit.html");
                         }
                     });
                 }

@@ -13,14 +13,14 @@
         <header class="page-header" aria-label="Header content" role="banner">
             <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Edit account</span>
+                <span class="pagetitle" id="editTitle"></span>
             </h1>
         </header>
         <section class="page-section" aria-label="Main content" role="main">
             <form method="post" id="student-form">
                 <input type="text" name="student_name" placeholder="Name" />
                 <input type="text" name="student_major" placeholder="Major" />
-                <!--<input type="text" name="student_courses" placeholder="Course" />-->
+                <input type="text" name="student_courses" placeholder="Course" />
                 <select name ="course_add" id="student_course_add">
                     <!--<option value="value1">Value 1</option>
                     <option value="value2" selected>Value 2</option>
