@@ -8,8 +8,29 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
 
-            console.log("print");
-            function toRegister() {
+            // Precondition: registerUser ajax call must be successful
+            // Purpose: creates session key to hold student we want to edit on next page
+            function createSessionKey(myUserName) {
+                var uriStringStudent = "http://localhost:8080/student";
+                $.ajax({
+                    url: uriStringStudent,
+                    type: "POST",
+                    contentType: "application/x-www-form-urlencoded",
+                    data: { username: myUserName },
+                    error: function (result) {
+                    },
+                    // create session for student key so we know which student to edit
+                    success: function (result) {
+                        var student = JSON.parse(result);
+                        console.log(student.key);
+                        sessionStorage.setItem('key', student.key);
+                    }
+                });
+            };
+
+
+            // registers user if no errors
+            function registerUser() {
                 var errors = "";
                 var formData = {};
                 $("#register-form").serializeArray().map(function (x) { formData[x.name] = x.value; });
@@ -40,6 +61,8 @@
                 }
 
                 else {
+                    
+
                     var uriString = "http://localhost:8080/register";
                     $.ajax({
                         url: uriString,
@@ -60,6 +83,9 @@
                             sessionStorage.setItem('username', user.username);
                             // clear user errors
                             document.getElementById('divErrors').innerHTML = "";
+
+                            createSessionKey(myUserName);
+
                             WinJS.Navigation.navigate("/pages/edit/edit.html");
                         }
                     });
@@ -72,7 +98,7 @@
             btn.id = "add-btn";
             btn.type = "button";
             btn.value = "Register";
-            btn.onclick = toRegister;
+            btn.onclick = registerUser;
             context.appendChild(btn);
         },
     });

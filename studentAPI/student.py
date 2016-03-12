@@ -117,14 +117,14 @@ class Student(webapp2.RequestHandler):
 			new_student.username = username
 		if name:
 			new_student.name = name
-		else:
-			self.response.status = 400
-			self.response.status_message = "Invalid request"
+		# else:
+		# 	self.response.status = 400
+		# 	self.response.status_message = "Invalid request"
 		if major:
 			new_student.major = major
-		else:
-			self.response.status = 400
-			self.response.status_message = "Invalid request"
+		# else:
+		# 	self.response.status = 400
+		# 	self.response.status_message = "Invalid request"
 		if courses:
 			for course in courses:
 				new_student.courses.append(ndb.Key(db_models.Course, int(course)))
@@ -155,10 +155,10 @@ class Student(webapp2.RequestHandler):
 class UpdateStudent(webapp2.RequestHandler):
 	def post(self):
 		# verify application/json request
-		if 'application/json' not in self.request.accept:
-			self.response.status = 406
-			self.response.status_message = "Not Acceptable, API only supports application/json"
-			return
+		# if 'application/json' not in self.request.accept:
+		# 	self.response.status = 406
+		# 	self.response.status_message = "Not Acceptable, API only supports application/json"
+		# 	return
 		# get id 
 		studentID = int(self.request.get('key'))
 		student = db_models.Student().get_by_id(int(studentID))
