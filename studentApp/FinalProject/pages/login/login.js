@@ -8,22 +8,29 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             
-            // Precondition: registerUser ajax call must be successful
             // Purpose: creates session key to hold student we want to edit on next page
-            function createSessionKey(myUserName) {
+            function findStudentKey(myUserName) {
                 var uriStringStudent = "http://localhost:8080/student";
                 $.ajax({
                     url: uriStringStudent,
-                    type: "POST",
-                    contentType: "application/x-www-form-urlencoded",
-                    data: { username: myUserName },
+                    datatype: 'json',
+                    async: false,
+                    type: "GET",
+                    cache: false,
                     error: function (result) {
                     },
                     // create session for student key so we know which student to edit
                     success: function (result) {
                         var student = JSON.parse(result);
-                        console.log(student.key);
-                        sessionStorage.setItem('key', student.key);
+                        var i;
+                        for (i = 0; i < student.length; i++) {
+                            if (student[i].username == myUserName) {
+                                break;
+                            }
+                        }
+                        sessionStorage.setItem('key', student[i].key);
+                        //console.log(i);
+                        console.log("My key: " + sessionStorage.getItem('key'));
                     }
                 });
             };
@@ -59,7 +66,7 @@
                         data: { username: myUserName, password: myPassword },
                         error: function (result) {
 
-                            console.log(result.status);
+                            //console.log(result.status);
                             if (result.status == 400) {
                                 errors = "Username doesn't exist<br>" 
                             } 
@@ -78,7 +85,7 @@
                             // clear user errors
                             document.getElementById('divErrors').innerHTML = "";
     
-                            createSessionKey(myUserName);
+                            findStudentKey(myUserName);
                                 
                             WinJS.Navigation.navigate("/pages/edit/edit.html");
                         }

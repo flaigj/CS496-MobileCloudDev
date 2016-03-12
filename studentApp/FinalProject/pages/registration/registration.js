@@ -10,7 +10,7 @@
 
             // Precondition: registerUser ajax call must be successful
             // Purpose: creates session key to hold student we want to edit on next page
-            function createSessionKey(myUserName) {
+            function createStudent(myUserName) {
                 var uriStringStudent = "http://localhost:8080/student";
                 $.ajax({
                     url: uriStringStudent,
@@ -22,7 +22,7 @@
                     // create session for student key so we know which student to edit
                     success: function (result) {
                         var student = JSON.parse(result);
-                        console.log(student.key);
+                        //console.log(student.key);
                         sessionStorage.setItem('key', student.key);
                     }
                 });
@@ -84,7 +84,7 @@
                             // clear user errors
                             document.getElementById('divErrors').innerHTML = "";
 
-                            createSessionKey(myUserName);
+                            createStudent(myUserName);
 
                             WinJS.Navigation.navigate("/pages/edit/edit.html");
                         }

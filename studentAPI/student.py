@@ -148,8 +148,9 @@ class Student(webapp2.RequestHandler):
 		# write all ids
 		else:
 			q = db_models.Student.query()
-			keys = q.fetch(keys_only=True)
-			results = { 'keys' : [x.id() for x in keys]}
+			# keys = q.fetch(keys_only=True)
+			# results = { 'keys' : [x.id() for x in keys]}
+			results = [{'key':x.key.id(), 'username': x.username, 'name':x.name, 'major':x.major, 'courses[]':x.courses} for x in q.fetch()]
 			self.response.write(json.dumps(results))
 
 class UpdateStudent(webapp2.RequestHandler):

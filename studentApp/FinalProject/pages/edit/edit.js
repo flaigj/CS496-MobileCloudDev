@@ -33,6 +33,8 @@
             // gets values from database to populate into fields
             function getInfo() {
                 var key = sessionStorage.getItem('key');
+                console.log("Edit page get info");
+                console.log("KEY: " + key);
                 var uriStringGet = "http://localhost:8080/student/" + key;
                 $.ajax({
                     url: uriStringGet,
@@ -42,8 +44,25 @@
                     success: function (data) {
                         var student = JSON.parse(data);
                         // get name and major
-                        console.log("Name: " + data.name);
-                        console.log("Major: " + data.major)
+                        console.log("Name: " + student.name);
+                        console.log("Major: " + student.major);
+                        if (student.name != "undefined") {
+                            var sName = document.getElementById("sName");
+                            sName.value = student.name;
+                        }
+
+                        if (student.major != "undefined") {
+                            var sMajor = document.getElementById("sMajor");
+                            sMajor.value = student.major;
+                        }
+
+                        var form = document.getElementById("student-form");
+                        var btn = document.createElement("input");
+                        btn.id = "add-btn";
+                        btn.type = "button";
+                        btn.value = "Save";
+                        btn.onclick = editStudent;
+                        form.appendChild(btn);
                     }
                 })
             };
