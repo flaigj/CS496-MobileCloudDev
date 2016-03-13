@@ -12,9 +12,9 @@ images\Wide310x150Logo.scale-240.png
 js\default.js
 js\jquery.js
 js\navigator.js
-pages\courses.css
-pages\courses.html
-pages\courses.js
+pages\courses\courses.css
+pages\courses\courses.html
+pages\courses\courses.js
 pages\edit\edit.css
 pages\edit\edit.html
 pages\edit\edit.js
@@ -24,6 +24,9 @@ pages\home\home.js
 pages\login\login.css
 pages\login\login.html
 pages\login\login.js
+pages\manage_courses\manage_courses.css
+pages\manage_courses\manage_courses.html
+pages\manage_courses\manage_courses.js
 pages\registration\registration.css
 pages\registration\registration.html
 pages\registration\registration.js

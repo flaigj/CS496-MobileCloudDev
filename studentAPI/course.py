@@ -56,9 +56,9 @@ class Course(webapp2.RequestHandler):
 
 	def get(self, **kwargs):
 		# if not application/json end
-		if 'application/json' not in self.request.accept:
-			self.response.status_message = "Not Acceptable, API only supports application/json MIME type"
-			return
+		#if 'application/json' not in self.request.accept:
+		#	self.response.status_message = "Not Acceptable, API only supports application/json MIME type"
+		#	return
 		
 		# write a specific id's attributes
 		if 'cid' in kwargs:

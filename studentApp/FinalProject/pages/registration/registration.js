@@ -89,10 +89,7 @@
                             else {
                                 createStudent(myUserName);
                                 WinJS.Navigation.navigate("/pages/edit/edit.html");
-                            }
-                            
-
-                            
+                            }                                                     
                         }
                     });
                 }

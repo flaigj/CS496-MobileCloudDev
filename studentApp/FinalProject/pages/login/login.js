@@ -16,7 +16,7 @@
                     datatype: 'json',
                     async: false,
                     type: "GET",
-                    cache: false,
+                    //cache: false,
                     error: function (result) {
                     },
                     // create session for student key so we know which student to edit
@@ -84,13 +84,13 @@
                             sessionStorage.setItem('username', user.username);
                             // clear user errors
                             document.getElementById('divErrors').innerHTML = "";
-    
-                            findStudentKey(myUserName);
                             
                             if (sessionStorage.getItem('username') == "admin") {
+                                console.log(sessionStorage.getItem('username'));
                                 WinJS.Navigation.navigate("/pages/courses/courses.html");
                             }
                             else {
+                                findStudentKey(myUserName);
                                 WinJS.Navigation.navigate("/pages/edit/edit.html");
                             }
                             

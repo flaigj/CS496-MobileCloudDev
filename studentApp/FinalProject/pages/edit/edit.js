@@ -13,7 +13,7 @@
                     url: uriStringDD,
                     datatype: 'json',
                     type: 'get',
-                    cache: false,
+                    //cache: false,
                     success: function (data) {
                         var form = "";
                         var course = JSON.parse(data);
@@ -40,7 +40,7 @@
                     url: uriStringGet,
                     datatype: 'json',
                     type: 'get',
-                    cache: false,
+                    //cache: false,
                     success: function (data) {
                         var student = JSON.parse(data);
                         // get name and major
