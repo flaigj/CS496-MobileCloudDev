@@ -86,8 +86,14 @@
                             document.getElementById('divErrors').innerHTML = "";
     
                             findStudentKey(myUserName);
-                                
-                            WinJS.Navigation.navigate("/pages/edit/edit.html");
+                            
+                            if (sessionStorage.getItem('username') == "admin") {
+                                WinJS.Navigation.navigate("/pages/courses/courses.html");
+                            }
+                            else {
+                                WinJS.Navigation.navigate("/pages/edit/edit.html");
+                            }
+                            
                         }
                     });
                 }

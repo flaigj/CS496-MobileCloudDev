@@ -12,6 +12,9 @@ images\Wide310x150Logo.scale-240.png
 js\default.js
 js\jquery.js
 js\navigator.js
+pages\courses.css
+pages\courses.html
+pages\courses.js
 pages\edit\edit.css
 pages\edit\edit.html
 pages\edit\edit.js

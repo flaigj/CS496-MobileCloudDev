@@ -30,6 +30,9 @@
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\css\ui-themed.theme-light.css">
       <PackagePath>css\ui-themed.theme-light.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\courses.css">
+      <PackagePath>pages\courses.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\edit\edit.css">
       <PackagePath>pages\edit\edit.css</PackagePath>
     </AppxPackagedFile>
@@ -75,6 +78,9 @@
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\courses.js">
+      <PackagePath>pages\courses.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\edit\edit.js">
       <PackagePath>pages\edit\edit.js</PackagePath>
     </AppxPackagedFile>
@@ -86,6 +92,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.js">
       <PackagePath>pages\registration\registration.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\courses.html">
+      <PackagePath>pages\courses.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\edit\edit.html">
       <PackagePath>pages\edit\edit.html</PackagePath>

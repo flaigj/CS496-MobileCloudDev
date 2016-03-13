@@ -61,6 +61,9 @@
     <Content Include="js\default.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="pages\courses.css" />
+    <Content Include="pages\courses.html" />
+    <Content Include="pages\courses.js" />
     <Content Include="pages\edit\edit.css" />
     <Content Include="pages\edit\edit.html" />
     <Content Include="pages\edit\edit.js" />
@@ -77,6 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Phone.WinJS.2.1, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\NewFolder\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment

@@ -56,13 +56,13 @@
                             sMajor.value = student.major;
                         }
 
-                        var form = document.getElementById("student-form");
+                        /*var form = document.getElementById("student-form");
                         var btn = document.createElement("input");
                         btn.id = "add-btn";
                         btn.type = "button";
                         btn.value = "Save";
                         btn.onclick = editStudent;
-                        form.appendChild(btn);
+                        form.appendChild(btn);*/
                     }
                 })
             };
@@ -110,6 +110,16 @@
             btn.value = "Save";
             btn.onclick = editStudent;
             form.appendChild(btn);
+
+
+            var logoutBtn = document.getElementById("logoutBtn");
+            logoutBtn.addEventListener("click", this.LogoutPage, false);
+        },
+
+        LogoutPage: function (eventInfo) {
+            sessionStorage.setItem('key', null);
+            sessionStorage.setItem('username', null);
+            WinJS.Navigation.navigate("/pages/home/home.html");
         },
     });
 })();
