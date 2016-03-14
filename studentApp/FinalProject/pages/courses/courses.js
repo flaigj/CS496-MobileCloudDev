@@ -42,8 +42,8 @@
                     $.ajax({
                         url: uriString,
                         type: "POST",
-                        //contentType: "application/x-www-form-urlencoded",
-                        contentType: 'json',
+                        contentType: "application/x-www-form-urlencoded",
+                        datatype: 'json',
                         data: { key: course_key },
                         success: function (result) {
                     }

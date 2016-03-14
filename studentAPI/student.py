@@ -186,11 +186,11 @@ class UpdateStudent(webapp2.RequestHandler):
 
 class DeleteStudent(webapp2.RequestHandler):
 	def post(self):
-		# verify application/json request
-		if 'application/json' not in self.request.accept:
-			self.response.status = 406
-			self.response.status_message = "Not Acceptable, API only supports application/json"
-			return
+		# # verify application/json request
+		# if 'application/json' not in self.request.accept:
+		# 	self.response.status = 406
+		# 	self.response.status_message = "Not Acceptable, API only supports application/json"
+		# 	return
 		# get id 
 		studentID = int(self.request.get('key'))
 		student = db_models.Student().get_by_id(int(studentID))
@@ -218,3 +218,28 @@ class StudentCourses(webapp2.RequestHandler):
 			student.put()
 		self.response.write(json.dumps(student.to_dict()))
 		return
+
+# class StudentCourseDelete(webapp2.RequestHandler):
+# 	def delete(self, **kwargs):
+# 		if 'sid' in kwargs:
+# 			student = ndb.Key(db_models.Student, int(kwargs['sid'])).get()
+# 			if not student:
+# 				self.response.status = 404
+# 				self.response.status_message = "Student Not Found"
+# 				return
+# 		if 'cid' in kwargs:
+# 			course = ndb.Key(db_models.Course, int(kwargs['cid']))
+# 			if not student:
+# 				self.response.status = 404
+# 				self.response.status_message = "Course Not Found"
+# 				return
+		#for c in student.courses:
+			#student.courses.append(course)
+			#student.put()
+			#student.courses.remove(c)
+		#self.response.write(student.courses[0])
+		#s = student.query()
+		#self.response(s)
+		#for c in student.courses:
+		#self.response.write(json.dumps(student_courses))
+		#return		

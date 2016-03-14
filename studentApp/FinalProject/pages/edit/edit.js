@@ -6,6 +6,24 @@
     WinJS.UI.Pages.define("/pages/edit/edit.html", {
         ready: function (element, options) {
 
+            function deleteStudent() {
+                //var formData = {};
+                //$("#student-form").serializeArray().map(function (x) { formData[x.name] = x.value; });
+                var student_key = sessionStorage.getItem('key');
+                // if user entered errors go navigate home
+                var uriString = "http://localhost:8080/deleteStudent";
+                $.ajax({
+                    url: uriString,
+                    type: "POST",
+                    contentType: "application/x-www-form-urlencoded",
+                    datatype: 'json',
+                    data: { key: student_key },
+                    success: function (result) {
+                    }
+                });
+            }
+
+
             // dropdown list for updating courses
             function createDropDownList() {
                 var uriStringDD = "http://localhost:8080/course";
@@ -51,14 +69,6 @@
                             var sMajor = document.getElementById("sMajor");
                             sMajor.value = student.major;
                         }
-
-                        /*var form = document.getElementById("student-form");
-                        var btn = document.createElement("input");
-                        btn.id = "add-btn";
-                        btn.type = "button";
-                        btn.value = "Save";
-                        btn.onclick = editStudent;
-                        form.appendChild(btn);*/
                     }
                 })
             };
@@ -134,6 +144,15 @@
             btn.type = "button";
             btn.value = "Add course";
             btn.onclick = addCourse;
+            form.appendChild(btn);
+            form.appendChild("<br>");
+
+            var form = document.getElementById("student-form");
+            var btn = document.createElement("input");
+            btn.id = "del-student";
+            btn.type = "button";
+            btn.value = "Delete Student";
+            btn.onclick = deleteStudent;
             form.appendChild(btn);
 
             var saveFile = document.getElementById("saveFile");
