@@ -16,14 +16,46 @@
                     url: uriStringStudent,
                     type: "POST",
                     contentType: "application/x-www-form-urlencoded",
+                    datatype: "json",
+                    async: false,
                     data: { username: myUserName },
                     error: function (result) {
+                        console.log("ERROR?");
                     },
                     // create session for student key so we know which student to edit
                     success: function (result) {
+
+                        findStudentKey(myUserName);
+                    }
+                });
+            };
+
+            // Purpose: creates session key to hold student we want to edit on next page
+            function findStudentKey(myUserName) {
+                var uriStringStudent = "http://localhost:8080/student";
+                $.ajax({
+                    url: uriStringStudent,
+                    datatype: 'json',
+                    async: false,
+                    type: "GET",
+                    //cache: false,
+                    error: function (result) {
+                        console.log("Error somewhere");
+                    },
+                    // create session for student key so we know which student to edit
+                    success: function (result) {
+                        //console.log("Inside success findStudentKey");
                         var student = JSON.parse(result);
-                        //console.log(student.key);
-                        sessionStorage.setItem('key', student.key);
+                        var j = 0;
+                        for (i = 0; i < student.length; i++) {
+                            //console.log("Enters loop");
+                            if (student[i].username == myUserName) {
+                                j = i;
+                                //console.log("Enters if statement");
+                            }
+                        }   
+                        sessionStorage.setItem('key', student[j].key);
+                        console.log("KEY ME" + sessionStorage.getItem('key'));
                     }
                 });
             };
@@ -68,6 +100,7 @@
                         url: uriString,
                         type: "POST",
                         contentType: "application/x-www-form-urlencoded",
+                        datatype: 'json',
                         data: { username: myUserName, password: myPassword },
                         error: function(result){
                             // username already exists; clientside error checking supresses all other 400 codes

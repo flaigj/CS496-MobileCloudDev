@@ -8,6 +8,7 @@ app = webapp2.WSGIApplication([
 	('/course', 'course.Course'),
 	], debug=True)
 
+#app.router.add(webapp2.Route(r'/student/<sid:[0-9]+>/deleteCourse/<cid:[0-9]+>', 'student.StudentDelCourse'))
 app.router.add(webapp2.Route(r'/login', 'student.Login'))
 app.router.add(webapp2.Route(r'/register', 'student.Register'))
 app.router.add(webapp2.Route(r'/course/<cid:[0-9]+>', 'course.Course'))

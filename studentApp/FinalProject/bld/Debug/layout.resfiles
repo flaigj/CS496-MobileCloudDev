@@ -24,9 +24,9 @@ pages\home\home.js
 pages\login\login.css
 pages\login\login.html
 pages\login\login.js
-pages\manage_courses\manage_courses.css
-pages\manage_courses\manage_courses.html
-pages\manage_courses\manage_courses.js
 pages\registration\registration.css
 pages\registration\registration.html
 pages\registration\registration.js
+pages\savefile\savefile.css
+pages\savefile\savefile.html
+pages\savefile\savefile.js

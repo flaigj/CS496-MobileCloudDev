@@ -23,7 +23,7 @@
 
                         // create dynamic drop down list
                         for (var i = 0; i < course.length; i++) {
-                            var element = document.getElementById("course_mod");
+                            var element = document.getElementById("course_del");
                             var option = document.createElement("option");
                             option.value = course[i].key;
                             option.innerText = course[i].name;
@@ -32,6 +32,23 @@
                     }
                 })
             };
+
+            function deleteCourse() {
+                var formData = {};
+                $("#course-form").serializeArray().map(function (x) { formData[x.name] = x.value; });
+                var course_key = formData.course_delete;
+                // if user entered errors go navigate home
+                    var uriString = "http://localhost:8080/deleteCourse";
+                    $.ajax({
+                        url: uriString,
+                        type: "POST",
+                        //contentType: "application/x-www-form-urlencoded",
+                        contentType: 'json',
+                        data: { key: course_key },
+                        success: function (result) {
+                    }
+                });
+            }
 
             function addCourse() {
                 error = false;
@@ -58,6 +75,7 @@
                         url: uriString,
                         type: "POST",
                         contentType: "application/x-www-form-urlencoded",
+                        datatype: 'json',
                         data: { name: course_name, days: course_days, time: course_time },
                         success: function (result) {
                         }
@@ -67,7 +85,7 @@
                 if (error == true) {
                     document.getElementById("divErrors") = errors;
                 }
-            }
+            };
             //create button for every entity
             var parent = document.getElementById("course-form");
             var addBtn = document.createElement("input");
@@ -79,16 +97,16 @@
 
 
             // make courses dropdown list
-            //createDropDownList();
+            createDropDownList();
 
             // create button to delete course
-            /*var form = document.getElementById("course-form");
+            var form = document.getElementById("course-form");
             var btn = document.createElement("input");
             btn.id = "del-btn";
             btn.type = "button";
             btn.value = "Delete";
             btn.onclick = deleteCourse;
-            form.appendChild(btn);*/
+            form.appendChild(btn);
 
             var logoutBtn = document.getElementById("logoutBtn");
             logoutBtn.addEventListener("click", this.LogoutPage, false);

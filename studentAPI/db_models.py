@@ -28,6 +28,7 @@ class Student(Model):
 
 	def to_dict(self):
 		d = super(Student, self).to_dict()
+		d['key'] = self.key.id()
 		d['courses'] = [c.id() for c in d['courses']]
 		return d
 

@@ -42,11 +42,11 @@
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\login\login.css">
       <PackagePath>pages\login\login.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\manage_courses\manage_courses.css">
-      <PackagePath>pages\manage_courses\manage_courses.css</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.css">
       <PackagePath>pages\registration\registration.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\savefile\savefile.css">
+      <PackagePath>pages\savefile\savefile.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\images\Square150x150Logo.scale-240.png">
       <PackagePath>images\Square150x150Logo.scale-240.png</PackagePath>
@@ -93,11 +93,11 @@
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\login\login.js">
       <PackagePath>pages\login\login.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\manage_courses\manage_courses.js">
-      <PackagePath>pages\manage_courses\manage_courses.js</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.js">
       <PackagePath>pages\registration\registration.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\savefile\savefile.js">
+      <PackagePath>pages\savefile\savefile.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\courses\courses.html">
       <PackagePath>pages\courses\courses.html</PackagePath>
@@ -114,11 +114,11 @@
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\login\login.html">
       <PackagePath>pages\login\login.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\manage_courses\manage_courses.html">
-      <PackagePath>pages\manage_courses\manage_courses.html</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\registration\registration.html">
       <PackagePath>pages\registration\registration.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\pages\savefile\savefile.html">
+      <PackagePath>pages\savefile\savefile.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jason\Documents\projects\CS496-MobileCloudDev\studentApp\FinalProject\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>

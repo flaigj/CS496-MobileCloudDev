@@ -18,19 +18,21 @@
                     type: "GET",
                     //cache: false,
                     error: function (result) {
+                        console.log("Error somewhere");
                     },
                     // create session for student key so we know which student to edit
                     success: function (result) {
+                        //console.log("Inside success findStudentKey");
                         var student = JSON.parse(result);
-                        var i;
+                        var j = 0;
                         for (i = 0; i < student.length; i++) {
+                            //console.log("Enters loop");
                             if (student[i].username == myUserName) {
-                                break;
+                                j = i;
+                                //console.log("Enters if statement");
                             }
                         }
-                        sessionStorage.setItem('key', student[i].key);
-                        //console.log(i);
-                        console.log("My key: " + sessionStorage.getItem('key'));
+                        sessionStorage.setItem('key', student[j].key);
                     }
                 });
             };
@@ -62,11 +64,12 @@
                     $.ajax({
                         url: uriString,
                         type: "POST",
+                        async: false,
                         contentType: "application/x-www-form-urlencoded",
+                        dataype: 'json',
                         data: { username: myUserName, password: myPassword },
                         error: function (result) {
 
-                            //console.log(result.status);
                             if (result.status == 400) {
                                 errors = "Username doesn't exist<br>" 
                             } 
@@ -86,12 +89,12 @@
                             document.getElementById('divErrors').innerHTML = "";
                             
                             if (sessionStorage.getItem('username') == "admin") {
-                                console.log(sessionStorage.getItem('username'));
                                 WinJS.Navigation.navigate("/pages/courses/courses.html");
                             }
                             else {
+                                //console.log("At least not admin");
                                 findStudentKey(myUserName);
-                                WinJS.Navigation.navigate("/pages/edit/edit.html");
+                                WinJS.Navigation.navigate("/pages/edit/edit.html");                 
                             }
                             
                         }

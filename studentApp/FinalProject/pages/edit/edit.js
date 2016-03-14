@@ -33,8 +33,6 @@
             // gets values from database to populate into fields
             function getInfo() {
                 var key = sessionStorage.getItem('key');
-                console.log("Edit page get info");
-                console.log("KEY: " + key);
                 var uriStringGet = "http://localhost:8080/student/" + key;
                 $.ajax({
                     url: uriStringGet,
@@ -44,8 +42,6 @@
                     success: function (data) {
                         var student = JSON.parse(data);
                         // get name and major
-                        console.log("Name: " + student.name);
-                        console.log("Major: " + student.major);
                         if (student.name != "undefined") {
                             var sName = document.getElementById("sName");
                             sName.value = student.name;
@@ -87,7 +83,28 @@
                     url: uriString,
                     type: "post",
                     contentType: "application/x-www-form-urlencoded",
+                    datatype: 'json',
                     data: { key: studentKey, name: studentName, major: studentMajor},
+                    success: function (result) {
+                    }
+                });
+            };
+
+            function addCourse() {
+                var formData = {};
+                $("#student-form").serializeArray().map(function (x) { formData[x.name] = x.value; });
+                var courseKey = formData.course_add;
+                var studentKey = sessionStorage.getItem('key');
+
+                //console.log(studentKey + "/" + courseKey + "/")
+
+                var uriString = "http://localhost:8080/student/" + studentKey + "/course/" + courseKey;
+                $.ajax({
+                    url: uriString,
+                    type: "PUT",
+                    //contentType: "application/x-www-form-urlencoded",
+                    //headers: { "X-HTTP-Method-Override": "PUT" },
+                    //data: { },
                     success: function (result) {
                     }
                 });
@@ -111,9 +128,22 @@
             btn.onclick = editStudent;
             form.appendChild(btn);
 
+            var form = document.getElementById("student-form");
+            var btn = document.createElement("input");
+            btn.id = "add-class";
+            btn.type = "button";
+            btn.value = "Add course";
+            btn.onclick = addCourse;
+            form.appendChild(btn);
+
+            var saveFile = document.getElementById("saveFile");
+            saveFile.addEventListener("click", this.SaveFile, false);
 
             var logoutBtn = document.getElementById("logoutBtn");
             logoutBtn.addEventListener("click", this.LogoutPage, false);
+        },
+        SaveFile: function (eventInfo) {
+            WinJS.Navigation.navigate("/pages/savefile/savefile.html");
         },
 
         LogoutPage: function (eventInfo) {

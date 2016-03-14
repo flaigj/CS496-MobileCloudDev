@@ -150,7 +150,9 @@ class Student(webapp2.RequestHandler):
 			q = db_models.Student.query()
 			# keys = q.fetch(keys_only=True)
 			# results = { 'keys' : [x.id() for x in keys]}
-			results = [{'key':x.key.id(), 'username': x.username, 'name':x.name, 'major':x.major, 'courses[]':x.courses} for x in q.fetch()]
+			#results = [{'key':x.key.id(), 'username': x.username, 'name':x.name, 'major':x.major, 'courses':[x.courses]} for x in q.fetch()]
+			#results = [{'courses':[x.courses]} for x in q.fetch()]
+			results = [{'key':x.key.id(), 'username': x.username, 'name':x.name, 'major':x.major} for x in q.fetch()]
 			self.response.write(json.dumps(results))
 
 class UpdateStudent(webapp2.RequestHandler):
@@ -196,9 +198,9 @@ class DeleteStudent(webapp2.RequestHandler):
 
 class StudentCourses(webapp2.RequestHandler):
 	def put(self, **kwargs):
-		if 'application/json' not in self.request.accept:
-			self.response.status = 406
-			self.response.status_message = "Not Acceptable, API only supports application/json"
+		# if 'application/json' not in self.request.accept:
+		# 	self.response.status = 406
+		# 	self.response.status_message = "Not Acceptable, API only supports application/json"
 		if 'sid' in kwargs:
 			student = ndb.Key(db_models.Student, int(kwargs['sid'])).get()
 			if not student:

@@ -77,6 +77,9 @@
     <Content Include="pages\registration\registration.css" />
     <Content Include="pages\registration\registration.html" />
     <Content Include="pages\registration\registration.js" />
+    <Content Include="pages\savefile\savefile.css" />
+    <Content Include="pages\savefile\savefile.html" />
+    <Content Include="pages\savefile\savefile.js" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Phone.WinJS.2.1, Version=1.0" />

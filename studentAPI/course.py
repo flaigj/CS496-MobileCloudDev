@@ -104,11 +104,32 @@ class UpdateCourse(webapp2.RequestHandler):
 class DeleteCourse(webapp2.RequestHandler):
 	def post(self):
 		# verify application/json request
-		if 'application/json' not in self.request.accept:
-			self.response.status = 406
-			self.response.status_message = "Not Acceptable, API only supports application/json"
-			return
+		# if 'application/json' not in self.request.accept:
+		# 	self.response.status = 406
+		# 	self.response.status_message = "Not Acceptable, API only supports application/json"
+		# 	return
 		# get id 
 		courseID = int(self.request.get('key'))
 		course = db_models.Course().get_by_id(int(courseID))
-		course.key.delete()
+		# course.key.delete()
+		# search in students and remove keys to clean up resources
+		# results = [{'key':x.key.id(), 'username': x.username, 'name':x.name, 'major':x.major, 'courses[]':x.courses} for x in q.fetch()]
+		
+		# user_exists = [u.username for u in db_models.Register.query(db_models.Register.username == username).fetch()]
+		# user_match = db_models.Register.query(db_models.Register.username == username).fetch()
+		# key_match = db_models.Register.query(db_models.Student == username).fetch()
+
+		# for each student
+		std = db_models.Student.query().fetch()
+		
+		for s in std:
+			#self.response.write(s.name)
+			for x in s.courses:
+				self.response.write(x)
+		#sKeys = std.fetch()
+		#self.response.write(sKeys)
+		# for s in sKeys:
+			#self.response.write(sKeys[s])
+		# q = db_models.Course.query()
+		# keys = q.fetch(keys_only=True)
+		# results = { 'keys' : [x.id() for x in keys]}
