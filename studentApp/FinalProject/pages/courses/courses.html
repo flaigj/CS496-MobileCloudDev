@@ -13,7 +13,7 @@
         <header class="page-header" aria-label="Header content" role="banner">
             <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to courses</span>
+                <span id="mytitle" class="pagetitle">Admin Page</span>
             </h1>
         </header>
         <section class="page-section" aria-label="Main content" role="main">
@@ -23,10 +23,11 @@
                 <input type="text" name="course_time" placeholder="Time" />
                 <select name="course_delete" id="course_del"></select>
             </form>
+            <div id="userinterface">
             <button id="logoutBtn">Logout</button>
-            <div id="divError"></div>
+            <div id="divErrors"></div>
             <div id="inputErrors"></div>
-
+        </div>
         </section>
     </div>
 </body>

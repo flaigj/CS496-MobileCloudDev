@@ -12,3 +12,41 @@
     margin-top: 37px;
     margin-left: -96px;
 }
+
+section {
+    	color:green;
+}
+
+form {
+    	color:green;
+}
+
+
+div {
+  text-align:center;
+}
+
+td {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: break-all;
+}
+
+table, td, th {
+    border: 1px solid #8AC007;
+}
+
+th {
+    background-color: #8AC007;
+    color:white;
+}
+
+h3 {
+	text-align: left;
+	color:green;
+}
+
+h1 {
+	text-align: left;
+	color:#8AC007;
+}

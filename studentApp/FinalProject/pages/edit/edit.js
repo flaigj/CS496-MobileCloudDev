@@ -19,6 +19,7 @@
                     datatype: 'json',
                     data: { key: student_key },
                     success: function (result) {
+                        document.getElementById('msg').innerHTML = "Deleted student " + student_key;
                     }
                 });
             }
@@ -96,6 +97,7 @@
                     datatype: 'json',
                     data: { key: studentKey, name: studentName, major: studentMajor},
                     success: function (result) {
+                        document.getElementById('msg').innerHTML = "Updated record";
                     }
                 });
             };
@@ -116,6 +118,7 @@
                     //headers: { "X-HTTP-Method-Override": "PUT" },
                     //data: { },
                     success: function (result) {
+                        document.getElementById('msg').innerHTML = "Added course " + courseKey + " to " + studentKey;
                     }
                 });
             };
@@ -145,7 +148,7 @@
             btn.value = "Add course";
             btn.onclick = addCourse;
             form.appendChild(btn);
-            form.appendChild("<br>");
+            //form.appendChild("<br>");
 
             var form = document.getElementById("student-form");
             var btn = document.createElement("input");

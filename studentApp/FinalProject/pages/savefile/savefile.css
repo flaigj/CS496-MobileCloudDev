@@ -30,3 +30,13 @@
 		-ms-grid-row: 2;
 		height: 100%;
 	}
+
+h3 {
+	text-align: left;
+	color:green;
+}
+
+h1 {
+	text-align: left;
+	color:#8AC007;
+}

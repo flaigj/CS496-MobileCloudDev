@@ -30,3 +30,32 @@
 		-ms-grid-row: 2;
 		height: 100%;
 	}
+
+section {
+    	color:green;
+}
+
+td {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: break-all;
+}
+
+table, td, th {
+    border: 1px solid #8AC007;
+}
+
+th {
+    background-color: #8AC007;
+    color:white;
+}
+
+h3 {
+	text-align: left;
+	color:green;
+}
+
+h1 {
+	text-align: left;
+	color:#8AC007;
+}

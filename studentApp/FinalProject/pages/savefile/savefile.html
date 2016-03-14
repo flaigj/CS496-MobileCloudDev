@@ -13,13 +13,15 @@
         <header class="page-header" aria-label="Header content" role="banner">
             <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Save/View Classes</span>
+                <span id="mytitle" class="pagetitle">View/Save Results</span>
             </h1>
         </header>
         <section class="page-section" aria-label="Main content" role="main">
             <form method="post" id="save-student"></form>
             <div class="save" id="saveList"></div>
+            <div class="printBtn" id="pButton"></div>
             <div class="printout" id="displayFile"></div>
+            <div id="msg"></div>
             <button id="editBtn">Edit Page</button>
             <button id="logoutBtn">Logout</button>
         </section>

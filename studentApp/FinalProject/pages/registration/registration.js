@@ -20,7 +20,7 @@
                     async: false,
                     data: { username: myUserName },
                     error: function (result) {
-                        console.log("ERROR?");
+                        //console.log("ERROR?");
                     },
                     // create session for student key so we know which student to edit
                     success: function (result) {
@@ -101,6 +101,7 @@
                         type: "POST",
                         contentType: "application/x-www-form-urlencoded",
                         datatype: 'json',
+                        //async: false,
                         data: { username: myUserName, password: myPassword },
                         error: function(result){
                             // username already exists; clientside error checking supresses all other 400 codes
